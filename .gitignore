@@ -1,0 +1,11 @@
+solutions/
+ad_tutorial_env/
+data/intermediate_files
+data/advanced_files
+data/graph_files
+data/basic_files
+*~
+*.root
+.snakemake
+.ipynb_checkpoints
+*#*
