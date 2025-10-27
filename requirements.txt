@@ -1,0 +1,17 @@
+snakemake
+scikit-learn
+numpy
+matplotlib
+jupyter
+tensorflow
+keras-tuner
+pytest
+pytest-cov
+h5py
+rich
+uproot
+argparse
+pulp<2.8.0
+awkward
+torch
+torch-geometric
