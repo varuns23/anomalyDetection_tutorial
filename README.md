@@ -4,15 +4,17 @@ These exercises are to be used for HSF-India Hackathon to be held at University 
 
 These exercises are designed to be as light on requirements as possible. In general, if you have a linux system with python on it, and a way to look at a Jupyter notebook, you should be able to run these exercises.
 
-You will be using the University of Wisconsin Analysis Facility (https://cms01.hep.wisc.edu)
+You will be using the University of Wisconsin Analysis Facility (```https://cms01.hep.wisc.edu```). Open a terminal and setup a virtual environment with the necessary packages. You need to run it just once.
+```
+$ source setup.sh
+$ source ad_tutorial_env/bin/activate
+$ python -m ipykernel install --user --name=ad_tutorial_env --display-name "ad_tutorial_env”
+```
+Start a python notebook, you may have to shutdown and restart the kernel in order to select the virtual env as kernel.
 
-We  have provided a quick setup script, `setup.sh`.
-It will make a python virtual environment, and install several necessary packages. Do not run it more than once.
-If you haven't used a virtual environment before, it can be activated (in bash) with `source ad_tutorial_env/bin/activate` and deactivated via `deactivate`.
-Any packages installed in a virtual environment will only affect that virtual environment.
-The script should leave you in it by default, but if you need to get back in, just activate it again.
+If you haven't used a virtual environment before, it can be activated (in bash) with `source ad_tutorial_env/bin/activate` and deactivated via `deactivate` any number of times. [Do not delete the ad_tutorial_env directory]. Any packages installed in a virtual environment will only affect that virtual environment. The script should leave you in it by default, but if you need to get back in, just activate it again.
 
-The exercises are in jupyter notebooks. If you are `ssh`'d into a machine, we recommend you use port forwarding via:
+All the exercises are in jupyter notebooks. Alternatively, if you would like to `ssh`'d into a machine, we recommend you use port forwarding via:
 ```
 ssh -L <random 4 digit number>:localhost:<the same random 4 digit number> <you>@<hosting machine>
 ```
@@ -25,7 +27,7 @@ jupyter notebook --no-browser --port <the same random 4 digit number as before>
 Jupyter should provide you a local host link you can go to. Open that on your machine, the port forwarding should allow you to access the notebook on the remote machine.
 
 ### Data File Creation
-We have included several basic converter scripts here designed to be used alongside Snakemake. If for any reason, you need to recreate the files in `data/`, you will need to be on an XRootD capable machine/account. The files can be created via a simple snakemake command (but may take some time). The ROOT files can be removed later.
+We have included several basic converter scripts here designed to be used alongside Snakemake. If for any reason, you need to recreate the files in `data/`, you will need to be on an XRootD-capable machine/account. The files can be created via a simple snakemake command (but may take some time). The ROOT files can be removed later.
 
 ### Note:
 
